@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Catcher Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Background decorative elements -->
+        <div class="background-hearts">
+            <div class="heart heart-1">💜</div>
+            <div class="heart heart-2">💜</div>
+            <div class="heart heart-3">💜</div>
+            <div class="heart heart-4">💜</div>
+            <div class="heart heart-5">💜</div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content-wrapper">
+            <!-- Mini Game Container -->
+            <div class="game-container" id="gameContainer">
+                <div class="game-header">
+                    <h1 class="game-title">💜 Heart Catcher 💜</h1>
+                    <p class="game-instruction">Move your heart to catch the falling hearts! Get 10 to win!</p>
+                    <div class="game-stats">
+                        <span class="hearts-caught">Hearts: <span id="heartCount">0</span>/10</span>
+                        <span class="game-timer">Time: <span id="gameTimer">30</span>s</span>
+                    </div>
+                </div>
+                <div class="game-area" id="gameArea">
+                    <div class="player" id="player">💜</div>
+                </div>
+                <div class="game-controls">
+                    <button class="start-game-btn" id="startGameBtn" onclick="startGame()">Start Game</button>
+                    <div class="mobile-controls" id="mobileControls" style="display: none;">
+                        <button class="control-btn" id="leftBtn">←</button>
+                        <button class="control-btn" id="rightBtn">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message-container" id="messageContainer" style="display: none;">
+                <!-- Message 1 -->
+                <div class="message-card" id="message1">
+                    <div class="message-header">
+                        <h1 class="title">💕 A Special Message 💕</h1>
+                    </div>
+                    <div class="message-content">
+                        <p class="message-text">
+                            Do you remember that first night we talked on Tinder? I certainly do, we chatted until 7 AM! From that very first conversation, you brought back a spark in me I didn't even realize was missing. Getting to know you since then has been an absolute joy, and every moment we share just makes me smile.
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <button class="continue-btn" onclick="showNextMessage(2)">
+                            Continue 💜
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Message 2 -->
+                <div class="message-card" id="message2">
+                    <div class="message-content">
+                        <p class="message-text">
+                            I've been thinking a lot about us lately, and it's clear to me that what I feel for you has grown into something truly profound. You've touched my heart in a way no one else has, and I find myself falling deeper in love with you every day. I cherish our connection, and the thought of a future with you fills me with so much hope and happiness.
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <button class="continue-btn" onclick="showNextMessage(3)">
+                            Continue 💜
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Message 3 -->
+                <div class="message-card" id="message3">
+                    <div class="message-content">
+                        <p class="message-text final-message">
+                            So, with all the love in my heart, and with genuine hope for what's ahead for us, can I court you?
+                        </p>
+                    </div>
+                    <div class="button-container final-buttons">
+                        <button class="yes-btn" id="yesBtn" onclick="handleYes()">
+                            Yes! 💜
+                        </button>
+                        <button class="no-btn" id="noBtn" onclick="handleNo()">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daisy animation container -->
+            <div class="daisy-container" id="daisyContainer">
+                <div class="celebration-text">
+                    <h2>You said YES! 💜</h2>
+                    <p>You've made me the happiest person alive!</p>
+                </div>
+                <div class="daisies">
+                    <div class="daisy daisy-1">🌼</div>
+                    <div class="daisy daisy-2">🌼</div>
+                    <div class="daisy daisy-3">🌼</div>
+                    <div class="daisy daisy-4">🌼</div>
+                    <div class="daisy daisy-5">🌼</div>
+                    <div class="daisy daisy-6">🌼</div>
+                    <div class="daisy daisy-7">🌼</div>
+                    <div class="daisy daisy-8">🌼</div>
+                </div>
+                <div class="hearts-celebration">
+                    <div class="floating-heart">💜</div>
+                    <div class="floating-heart">💜</div>
+                    <div class="floating-heart">💜</div>
+                    <div class="floating-heart">💜</div>
+                    <div class="floating-heart">💜</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
